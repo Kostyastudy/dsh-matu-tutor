@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "MATU C tutor",
+    "description": "Syncs UESTC APTAT (码图) C homework into a local workbench, opened from the MATU C tutor entry in the left sidebar. Sign in once with a matu.uestc.edu.cn account to read the problem, write and run code with the local gcc, submit for a real score, and ask an AI tutor for step-by-step help. Compiling needs gcc installed; the site must be reachable from your network. Submissions use up the attempts your course allows, and the tutor bills model calls.",
+    "detail": "docs/DETAIL.md"
+  }
+}

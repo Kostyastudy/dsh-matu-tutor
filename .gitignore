@@ -1,0 +1,16 @@
+# verification renders and local scratch
+.verify/
+tmp/
+*.log
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# never commit local plugin data or credentials
+aptat-data/
+.dsh-matu-tutor/
+*.tgz
+node_modules/

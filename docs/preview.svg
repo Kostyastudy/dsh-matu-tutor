@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="A three-column workbench: a problem list with scored rows, a problem statement above a line-numbered C editor with a matching terminal result, and an AI tutor conversation">
+  <defs>
+    <clipPath id="mt-clip-editor">
+      <rect x="162" y="134" width="270" height="90" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- panel surfaces -->
+  <g fill="#8b95a7" opacity="0.13">
+    <rect x="32" y="40" width="118" height="220" rx="10"/>
+    <rect x="162" y="40" width="270" height="86" rx="10"/>
+    <rect x="444" y="40" width="164" height="220" rx="10"/>
+  </g>
+  <g fill="none" stroke="#8b95a7" stroke-width="1" opacity="0.32">
+    <rect x="32.5" y="40.5" width="117" height="219" rx="10"/>
+    <rect x="162.5" y="40.5" width="269" height="85" rx="10"/>
+    <rect x="444.5" y="40.5" width="163" height="219" rx="10"/>
+  </g>
+
+  <!-- left rail: problem list, one row selected -->
+  <rect x="40" y="52" width="102" height="26" rx="6" fill="#2f8f7d" opacity="0.2"/>
+  <rect x="40" y="52" width="3" height="26" rx="1.5" fill="#2f8f7d"/>
+  <g fill="#8b95a7" opacity="0.62">
+    <rect x="50" y="59" width="12" height="12" rx="3"/>
+    <rect x="68" y="59" width="54" height="4" rx="2"/>
+    <rect x="68" y="67" width="34" height="3" rx="1.5"/>
+  </g>
+
+  <g>
+    <g fill="#8b95a7" opacity="0.4">
+      <rect x="50" y="89" width="12" height="12" rx="3"/>
+      <rect x="68" y="89" width="46" height="4" rx="2"/>
+      <rect x="68" y="97" width="28" height="3" rx="1.5"/>
+    </g>
+    <circle cx="136" cy="95" r="3" fill="#2f8f7d"/>
+
+    <g fill="#8b95a7" opacity="0.4">
+      <rect x="50" y="119" width="12" height="12" rx="3"/>
+      <rect x="68" y="119" width="52" height="4" rx="2"/>
+      <rect x="68" y="127" width="32" height="3" rx="1.5"/>
+    </g>
+    <circle cx="136" cy="125" r="3" fill="#e0663f"/>
+
+    <g fill="#8b95a7" opacity="0.4">
+      <rect x="50" y="149" width="12" height="12" rx="3"/>
+      <rect x="68" y="149" width="40" height="4" rx="2"/>
+      <rect x="68" y="157" width="24" height="3" rx="1.5"/>
+    </g>
+
+    <g fill="#8b95a7" opacity="0.28">
+      <rect x="50" y="179" width="12" height="12" rx="3"/>
+      <rect x="68" y="179" width="50" height="4" rx="2"/>
+      <rect x="68" y="187" width="30" height="3" rx="1.5"/>
+    </g>
+
+    <g fill="#8b95a7" opacity="0.28">
+      <rect x="50" y="209" width="12" height="12" rx="3"/>
+      <rect x="68" y="209" width="44" height="4" rx="2"/>
+      <rect x="68" y="217" width="26" height="3" rx="1.5"/>
+    </g>
+  </g>
+
+  <!-- problem statement -->
+  <g fill="#8b95a7">
+    <rect x="176" y="54" width="86" height="7" rx="3.5" opacity="0.72"/>
+    <rect x="176" y="70" width="232" height="4" rx="2" opacity="0.42"/>
+    <rect x="176" y="80" width="214" height="4" rx="2" opacity="0.42"/>
+    <rect x="176" y="90" width="196" height="4" rx="2" opacity="0.42"/>
+  </g>
+  <!-- the output requirement, quoted before any code is written -->
+  <rect x="176" y="103" width="4" height="12" rx="2" fill="#2f8f7d"/>
+  <rect x="186" y="106" width="150" height="5" rx="2.5" fill="#2f8f7d" opacity="0.78"/>
+
+  <!-- editor -->
+  <g fill="#8b95a7" opacity="0.16">
+    <rect x="162" y="134" width="270" height="90" rx="8"/>
+  </g>
+  <rect x="162" y="134" width="270" height="18" rx="8" fill="#8b95a7" opacity="0.2"/>
+  <rect x="162" y="146" width="270" height="6" fill="#8b95a7" opacity="0.2"/>
+  <g fill="#8b95a7" opacity="0.55">
+    <rect x="174" y="140" width="26" height="5" rx="2.5"/>
+    <rect x="208" y="140" width="18" height="5" rx="2.5" opacity="0.6"/>
+  </g>
+
+  <g clip-path="url(#mt-clip-editor)">
+    <g fill="#8b95a7" opacity="0.4">
+      <rect x="174" y="156" width="7" height="3" rx="1.5"/>
+      <rect x="174" y="168" width="7" height="3" rx="1.5"/>
+      <rect x="174" y="180" width="7" height="3" rx="1.5"/>
+      <rect x="174" y="192" width="7" height="3" rx="1.5"/>
+      <rect x="174" y="204" width="7" height="3" rx="1.5"/>
+      <rect x="174" y="216" width="7" height="3" rx="1.5"/>
+    </g>
+    <!-- indentation shows the nesting of the feature blocks -->
+    <rect x="190" y="155" width="44" height="5" rx="2.5" fill="#e0663f" opacity="0.72"/>
+    <rect x="190" y="167" width="26" height="5" rx="2.5" fill="#8b95a7" opacity="0.5"/>
+    <rect x="202" y="179" width="52" height="5" rx="2.5" fill="#2f8f7d" opacity="0.8"/>
+    <rect x="214" y="191" width="68" height="5" rx="2.5" fill="#2f8f7d" opacity="0.55"/>
+    <rect x="226" y="203" width="40" height="5" rx="2.5" fill="#8b95a7" opacity="0.5"/>
+    <rect x="202" y="215" width="22" height="5" rx="2.5" fill="#8b95a7" opacity="0.5"/>
+  </g>
+
+  <!-- terminal result -->
+  <rect x="162" y="232" width="270" height="28" rx="8" fill="#8b95a7" opacity="0.16"/>
+  <path d="M176 246.5l3.5 3.6 5.5-6.4" fill="none" stroke="#2f8f7d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#8b95a7" opacity="0.55">
+    <rect x="194" y="241" width="72" height="4" rx="2"/>
+    <rect x="194" y="250" width="120" height="4" rx="2" opacity="0.7"/>
+  </g>
+
+  <!-- tutor -->
+  <circle cx="461" cy="57" r="7" fill="#2f8f7d" opacity="0.85"/>
+  <g fill="#8b95a7" opacity="0.6">
+    <rect x="475" y="51" width="42" height="5" rx="2.5"/>
+    <rect x="475" y="60" width="26" height="4" rx="2" opacity="0.65"/>
+  </g>
+
+  <rect x="452" y="76" width="148" height="102" rx="8" fill="#8b95a7" opacity="0.16"/>
+  <rect x="452" y="76" width="148" height="102" rx="8" fill="none" stroke="#8b95a7" stroke-width="1" opacity="0.28"/>
+  <g fill="#8b95a7">
+    <rect x="462" y="87" width="96" height="5" rx="2.5" opacity="0.62"/>
+    <rect x="462" y="99" width="126" height="4" rx="2" opacity="0.4"/>
+    <rect x="462" y="109" width="112" height="4" rx="2" opacity="0.4"/>
+    <rect x="472" y="121" width="104" height="4" rx="2" opacity="0.4"/>
+    <rect x="472" y="131" width="88" height="4" rx="2" opacity="0.4"/>
+    <rect x="462" y="143" width="118" height="4" rx="2" opacity="0.4"/>
+    <rect x="462" y="153" width="70" height="4" rx="2" opacity="0.4"/>
+  </g>
+  <rect x="462" y="165" width="64" height="5" rx="2.5" fill="#e0663f" opacity="0.7"/>
+
+  <g fill="#8b95a7" opacity="0.34">
+    <rect x="452" y="192" width="150" height="4" rx="2"/>
+    <rect x="452" y="202" width="104" height="4" rx="2"/>
+  </g>
+  <rect x="452" y="216" width="148" height="30" rx="8" fill="#8b95a7" opacity="0.12"/>
+  <g fill="#8b95a7" opacity="0.4">
+    <rect x="462" y="226" width="82" height="4" rx="2"/>
+    <rect x="462" y="235" width="54" height="4" rx="2"/>
+  </g>
+</svg>
