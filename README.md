@@ -71,6 +71,7 @@ You can move it with the `dataDir` config field or the `DSH_MATU_TUTOR_DATA` env
 - **APTAT is a campus-hosted service.** `matu.uestc.edu.cn` is not reliably reachable from every network. If login times out, open `http://matu.uestc.edu.cn` in a browser first — if that also fails, the server or the route to it is the problem, not the plugin.
 - **It reads the site's HTML, not an API.** There is no public API, so the plugin scrapes the JSP pages. If the site changes its markup, sync or submission can break until the parsers are updated.
 - **One account per Harness profile.** The saved credential is a single APTAT login.
+- **The plugin's HTTP routes are guarded like DSH's own.** They go through `ctx.connection.requestRejection`, so a page from another origin cannot reach them, and the plugin token is only handed to the DSH page itself.
 
 ## How it is built
 

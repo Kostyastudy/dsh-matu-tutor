@@ -293,7 +293,10 @@ function chineseModeLabel(mode) {
   return map[mode] || '逐步讲解'
 }
 
-export const inject = ['webServer']
+// `connection` supplies the Host/Origin and browser-credential checks that every
+// other Web route gets. Without it these routes are reachable from any page the
+// user has open, which is why it is required rather than optional.
+export const inject = ['webServer', 'connection']
 
 export function apply(ctx, config = {}) {
   // `DSH_APTAT_DATA` is the variable the pre-release local build read; keeping it
@@ -1050,6 +1053,9 @@ export function apply(ctx, config = {}) {
       return true
     }
     if (pathname === `${ROUTE_PREFIX}/bootstrap`) {
+      // The page the client runs in is the origin DSH served it from, so the
+      // connection check above already established that this is our own UI. The
+      // token only ever goes to that page; anything else is refused above.
       await credentialsReady
       json(res, 200, {
         ok: true,
@@ -1404,6 +1410,26 @@ export function apply(ctx, config = {}) {
       kind: 'prefix',
       path: ROUTE_PREFIX,
       handler: (req, res) => {
+        // Every route below is same-origin UI traffic, so it must pass the same
+        // Host/Origin and browser-credential checks DSH applies to its own Web
+        // routes. Skipping this made the whole surface callable from any page the
+        // user had open — including /bootstrap, which hands out the plugin token.
+        // `requestRejection` returns a status when the request must be refused and
+        // undefined when it may proceed.
+        let rejection
+        try {
+          const connection = ctx.get('connection')
+          rejection = connection?.requestRejection?.(req)
+        } catch (error) {
+          rejection = undefined
+          ctx.logger?.('matu-tutor').warn?.(`connection check unavailable: ${error.message}`)
+        }
+        if (rejection) {
+          const status = typeof rejection === 'number' ? rejection : (rejection?.status ?? 403)
+          res.writeHead(status, { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' })
+          res.end('forbidden')
+          return
+        }
         handle(req, res).then((handled) => {
           if (!handled && !res.writableEnded) {
             res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' })

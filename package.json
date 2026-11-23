@@ -1,6 +1,6 @@
 {
   "name": "dsh-matu-tutor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UESTC APTAT (码图) C-language workbench for DeepSeek Harness: sync homework, compile and run locally, submit for a real score, and learn with an AI tutor.",
   "private": true,
   "type": "module",

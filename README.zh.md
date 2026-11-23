@@ -71,6 +71,7 @@ C:\msys64\usr\bin\bash -lc "pacman -S --needed mingw-w64-x86_64-gcc"
 - **码图是校内服务**。`matu.uestc.edu.cn` 不保证每个网络都能访问。登录超时的时候先用浏览器打开 `http://matu.uestc.edu.cn`——如果浏览器也打不开，那是服务器或线路的问题，不是插件的问题。
 - **它读的是网页 HTML，不是 API**。码图没有公开接口，插件靠解析 JSP 页面工作。站点改版的话，同步或提交会失效，直到解析器跟着更新。
 - **一个 Harness profile 对应一个账号**。保存的凭据是一份码图登录信息。
+- **插件的 HTTP 路由和 DSH 自己的路由一样受保护**。它们走 `ctx.connection.requestRejection`，所以别的源上的页面调不到；插件令牌也只会交给 DSH 页面本身。
 
 ## 它是怎么搭的
 
